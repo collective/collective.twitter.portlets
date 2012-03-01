@@ -1,0 +1,108 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-03-01 03:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.twitter.portlets\n"
+
+#: collective/twitter/portlets/profiles/default/portlets.xml
+msgid "A portlet that will show a profile feed from Twitter"
+msgstr ""
+
+#: collective/twitter/portlets/profiles/default/portlets.xml
+msgid "A portlet to show search results from Twitter"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:65
+#: collective/twitter/portlets/twsearch.py:65
+msgid "Header"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:82
+#: collective/twitter/portlets/twsearch.py:82
+msgid "Maximum results"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:87
+#: collective/twitter/portlets/twsearch.py:87
+msgid "Pretty dates"
+msgstr ""
+
+#: collective/twitter/portlets/twsearch.py:74
+msgid "Search string"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:78
+#: collective/twitter/portlets/twsearch.py:78
+msgid "Show avatars"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:88
+#: collective/twitter/portlets/twsearch.py:88
+msgid "Show dates in a pretty format (ie. '4 hours ago')."
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:79
+#: collective/twitter/portlets/twsearch.py:79
+msgid "Show people's avatars."
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.pt:54
+#: collective/twitter/portlets/twsearch.pt:54
+msgid "The Twitter account used to display content in this portlet appears to be invalid"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:75
+msgid "The Twitter user you wish to get feed from (you can include or omit the initial @)."
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:66
+#: collective/twitter/portlets/twsearch.py:66
+msgid "The header for the portlet. Leave empty for none."
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:83
+#: collective/twitter/portlets/twsearch.py:83
+msgid "The maximum results number."
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:69
+#: collective/twitter/portlets/twsearch.py:69
+msgid "Twitter account"
+msgstr ""
+
+#: collective/twitter/portlets/profiles/default/portlets.xml
+#: collective/twitter/portlets/twprofile.py:129
+msgid "Twitter profile Portlet"
+msgstr ""
+
+#: collective/twitter/portlets/profiles/default/portlets.xml
+#: collective/twitter/portlets/twsearch.py:129
+msgid "Twitter search Portlet"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:74
+msgid "Twitter user"
+msgstr ""
+
+#: collective/twitter/portlets/twsearch.py:75
+msgid "What to search."
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.py:70
+#: collective/twitter/portlets/twsearch.py:70
+msgid "Which twitter account to use."
+msgstr ""
+
