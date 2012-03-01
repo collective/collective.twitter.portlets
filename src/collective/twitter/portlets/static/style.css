@@ -1,0 +1,71 @@
+.twitterSearchPortlet,
+.twitterProfilePortlet {
+    background-color: #8EC1DA;
+    color: #FFFFFF;
+    border-radius: 15px;
+    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+    font-size: 12px !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+
+dl.twitterSearchPortlet a,  dl.portlet.twitterSearchPortlet a:link,
+dl.portlet.twitterProfilePortlet a,  dl.portlet.twitterProfilePortlet a:link {
+    color: #1985B5 !important;
+    border: 0;
+}
+.twitterSearchPortlet .portletHeader,
+.twitterProfilePortlet .portletHeader {
+    border-radius: 15px;
+    background-color: #8EC1DA;
+    padding-top: 15px;
+    font-size: 14px !important;
+}
+.twitterSearchPortlet .portletItem,
+.twitterProfilePortlet .portletItem {
+    background-color: #FFFFFF;
+    padding: 10px 0 10px 0 !important;
+    margin: 1px;
+    border-radius: 10px;
+}
+
+.twitterSearchPortlet .tweet-user-name,
+.twitterProfilePortlet .tweet-user-name {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.twitterSearchPortlet .result-item,
+.twitterProfilePortlet .result-item {
+    color:#000000;
+    border-bottom: 1px dotted #DDDDDD;
+    padding-top: 5px;
+}
+
+.twitterSearchPortlet .result-item .tweet-image,
+.twitterProfilePortlet .result-item .tweet-image {
+    float: left;
+    margin: 5px;
+}
+
+.twitterSearchPortlet .result-item .tweet-text,
+.twitterProfilePortlet .result-item .tweet-text {
+    margin: 5px 0 0;
+    overflow: hidden;
+}
+
+.twitterSearchPortlet .tweet-actions,
+.twitterProfilePortlet .tweet-actions {
+    font-size: 9px;
+    font-style: normal;
+    color: #1985B5;
+    clear: both;
+    margin: 0 0 5px 5px;
+}
+
+.twitterSearchPortlet .result-item .tweet-content p,
+.twitterProfilePortlet .result-item .tweet-content p {
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 0 0px;
+}
