@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<portlets>
+ <assignment
+    remove="True"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    type="collective.twitter.portlets.TwitterProfilePortlet"
+    name="twitter-profile"
+    />
+ <assignment
+    remove="True"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    type="collective.twitter.search.TwitterSearchPortlet"
+    name="twitter-search"
+    />
+</portlets>

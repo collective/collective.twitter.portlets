@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<portlets
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="collective.twitter.portlets">
+
+ <portlet title="Twitter profile Portlet"
+    addview="collective.twitter.portlets.TwitterProfilePortlet"
+    description="A portlet that will show a profile feed from Twitter"
+    i18n:attributes="title; description">
+  <for interface="plone.app.portlets.interfaces.IColumn" />
+  <for interface="plone.app.portlets.interfaces.IDashboard" />
+ </portlet>
+
+ <portlet title="Twitter search Portlet"
+    addview="collective.twitter.portlets.TwitterSearchPortlet"
+    description="A portlet to show search results from Twitter"
+    i18n:attributes="title; description">
+  <for interface="plone.app.portlets.interfaces.IColumn" />
+  <for interface="plone.app.portlets.interfaces.IDashboard" />
+ </portlet>
+
+ <!--
+ <assignment
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    type="collective.twitter.portlets.TwitterProfilePortlet"
+    name="twitter-profile"
+        /> -->
+
+ <!--
+ <assignment
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    type="collective.twitter.portlets.TwitterSearchPortlet"
+    name="twitter-search"
+        /> -->
+
+</portlets>
