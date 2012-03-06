@@ -10,7 +10,7 @@ This product depends on "collective.twitter.accounts".
 Usage
 =====
 
-* "Twitter profile portlet" (previously collective.twitter.profile)
+* "Twitter  profile portlet" (previously collective.twitter.profile)
     - Add a "Twitter profile Portlet" wherever you want.
     - Enter a header (if you want one)
     - Choose the Twitter account to use from the drop-down (See Prerequisites)
