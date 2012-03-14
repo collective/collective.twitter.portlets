@@ -41,9 +41,16 @@
                   <span class="tweet-timestamp"
                       tal:content="python:toLocalizedTime(view.getDate(result), long_format=1)"
                       tal:condition="not:view/data/pretty_date"></span>
-                  <span class="tweet-timestamp"
+                  <a tal:attributes="href python:view.getTweetUrl(result)" class="tweet-timestamp"
                       tal:content="python:view.getDate(result)"
-                      tal:condition="view/data/pretty_date"></span>
+                      tal:condition="view/data/pretty_date" i18n:translate=""
+                       i18n:domain="collective.twitter.portlets"></a>
+                  <a class="reply" tal:attributes="href python:view.getReplyTweetUrl(result)" i18n:translate=""
+                       i18n:domain="collective.twitter.portlets">Reply </a>
+                  <a class="retweet" tal:attributes="href python:view.getReTweetUrl(result)" i18n:translate=""
+                   i18n:domain="collective.twitter.portlets">ReTweet </a>
+                  <a class="fav" tal:attributes="href python:view.getFavTweetUrl(result)" i18n:translate=""
+                   i18n:domain="collective.twitter.portlets">Favorite </a>
                 </div>
             </div>
         </dd>

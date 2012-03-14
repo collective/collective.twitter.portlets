@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2012-03-01 03:45+0000\n"
+"POT-Creation-Date: 2012-03-14 15:50+0000\n"
 "PO-Revision-Date: 2012-03-01 00:48-0300\n"
 "Last-Translator: Franco Pellegrini\n"
 "Language-Team: Spanish <>\n"
@@ -25,6 +25,11 @@ msgstr "Un portlet para mostrar los tweets de un usuario en Twitter"
 msgid "A portlet to show search results from Twitter"
 msgstr "Un portlet para mostrar resultados de búsquedas en Twitter"
 
+#: collective/twitter/portlets/twprofile.pt:53
+#: collective/twitter/portlets/twsearch.pt:52
+msgid "Favorite"
+msgstr "Favoritear"
+
 #: collective/twitter/portlets/twprofile.py:65
 #: collective/twitter/portlets/twsearch.py:65
 msgid "Header"
@@ -39,6 +44,16 @@ msgstr "Resultados máximos"
 #: collective/twitter/portlets/twsearch.py:87
 msgid "Pretty dates"
 msgstr "Fechas mejoradas"
+
+#: collective/twitter/portlets/twprofile.pt:51
+#: collective/twitter/portlets/twsearch.pt:50
+msgid "ReTweet"
+msgstr "ReTweetear"
+
+#: collective/twitter/portlets/twprofile.pt:49
+#: collective/twitter/portlets/twsearch.pt:48
+msgid "Reply"
+msgstr "Responder"
 
 #: collective/twitter/portlets/twsearch.py:74
 msgid "Search string"
@@ -59,22 +74,14 @@ msgstr "Mostrar fechas en un formato mejorado (ej. 'hace 4 horas')."
 msgid "Show people's avatars."
 msgstr "Mostrar los avatares de las personas."
 
-#: collective/twitter/portlets/twprofile.pt:54
-#: collective/twitter/portlets/twsearch.pt:54
-msgid ""
-"The Twitter account used to display content in this portlet appears to be "
-"invalid"
-msgstr ""
-"La cuenta Twitter utilizada para mostrar el contenido en el portlet parece "
-"inválida"
+#: collective/twitter/portlets/twprofile.pt:62
+#: collective/twitter/portlets/twsearch.pt:61
+msgid "The Twitter account used to display content in this portlet appears to be invalid"
+msgstr "La cuenta Twitter utilizada para mostrar el contenido en el portlet parece inválida"
 
 #: collective/twitter/portlets/twprofile.py:75
-msgid ""
-"The Twitter user you wish to get feed from (you can include or omit the "
-"initial @)."
-msgstr ""
-"El usuario de Twitter del cual se quieren obtener los tweets (se puede "
-"incluir u omitir el @ inicial)."
+msgid "The Twitter user you wish to get feed from (you can include or omit the initial @)."
+msgstr "El usuario de Twitter del cual se quieren obtener los tweets (se puede incluir u omitir el @ inicial)."
 
 #: collective/twitter/portlets/twprofile.py:66
 #: collective/twitter/portlets/twsearch.py:66
@@ -113,5 +120,4 @@ msgstr "Qué buscar"
 #: collective/twitter/portlets/twsearch.py:70
 msgid "Which twitter account to use."
 msgstr "Qué cuenta de Twitter utilizar."
-
 

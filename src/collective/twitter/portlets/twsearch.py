@@ -226,6 +226,20 @@ class Renderer(base.Renderer):
 
         return "<p>%s</p>"%' '.join(split_text)
 
+    def getTweetUrl(self, result):
+        return "https://twitter.com/%s/status/%s" % \
+            (result.user.screen_name, result.id)
+
+    def getReplyTweetUrl(self, result):
+        return "https://twitter.com/intent/tweet?in_reply_to=%s" % result.id
+
+    def getReTweetUrl(self, result):
+        return "https://twitter.com/intent/retweet?tweet_id=%s" % result.id
+
+    def getFavTweetUrl(self, result):
+        return "https://twitter.com/intent/favorite?tweet_id=%s" % result.id
+
+
     def getDate(self, result):
         if self.data.pretty_date:
             # Returns human readable date for the tweet

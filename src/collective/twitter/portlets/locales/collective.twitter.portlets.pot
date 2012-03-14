@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-01 03:45+0000\n"
+"POT-Creation-Date: 2012-03-14 15:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,11 @@ msgstr ""
 msgid "A portlet to show search results from Twitter"
 msgstr ""
 
+#: collective/twitter/portlets/twprofile.pt:53
+#: collective/twitter/portlets/twsearch.pt:52
+msgid "Favorite"
+msgstr ""
+
 #: collective/twitter/portlets/twprofile.py:65
 #: collective/twitter/portlets/twsearch.py:65
 msgid "Header"
@@ -38,6 +43,16 @@ msgstr ""
 #: collective/twitter/portlets/twprofile.py:87
 #: collective/twitter/portlets/twsearch.py:87
 msgid "Pretty dates"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.pt:51
+#: collective/twitter/portlets/twsearch.pt:50
+msgid "ReTweet"
+msgstr ""
+
+#: collective/twitter/portlets/twprofile.pt:49
+#: collective/twitter/portlets/twsearch.pt:48
+msgid "Reply"
 msgstr ""
 
 #: collective/twitter/portlets/twsearch.py:74
@@ -59,8 +74,8 @@ msgstr ""
 msgid "Show people's avatars."
 msgstr ""
 
-#: collective/twitter/portlets/twprofile.pt:54
-#: collective/twitter/portlets/twsearch.pt:54
+#: collective/twitter/portlets/twprofile.pt:62
+#: collective/twitter/portlets/twsearch.pt:61
 msgid "The Twitter account used to display content in this portlet appears to be invalid"
 msgstr ""
 

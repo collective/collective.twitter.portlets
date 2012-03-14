@@ -50,7 +50,7 @@ dl.portlet.twitterProfilePortlet a,  dl.portlet.twitterProfilePortlet a:link {
 
 .twitterSearchPortlet .result-item .tweet-text,
 .twitterProfilePortlet .result-item .tweet-text {
-    margin: 5px 0 0;
+    margin: 5px 0 5px 0;
     overflow: hidden;
 }
 
@@ -61,6 +61,7 @@ dl.portlet.twitterProfilePortlet a,  dl.portlet.twitterProfilePortlet a:link {
     color: #1985B5;
     clear: both;
     margin: 0 0 5px 5px;
+    text-align: center;
 }
 
 .twitterSearchPortlet .result-item .tweet-content p,
@@ -68,4 +69,18 @@ dl.portlet.twitterProfilePortlet a,  dl.portlet.twitterProfilePortlet a:link {
     font-size: 11px;
     line-height: 13px;
     margin: 0 0 0px;
+}
+
+.twitterSearchPortlet .tweet-actions a,
+.twitterProfilePortlet .tweet-actions a { 
+    padding: 0 5px;
+}
+
+dl.portlet.twitterSearchPortlet .tweet-actions a.fav,
+dl.portlet.twitterSearchPortlet .tweet-actions a.retweet,
+dl.portlet.twitterSearchPortlet .tweet-actions a.reply,
+dl.portlet.twitterProfilePortlet .tweet-actions a.fav,
+dl.portlet.twitterProfilePortlet .tweet-actions a.retweet,
+dl.portlet.twitterProfilePortlet .tweet-actions a.reply { 
+    border-left: 1px dotted #1985B5;
 }

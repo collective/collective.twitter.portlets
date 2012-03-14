@@ -82,7 +82,7 @@ class ITwitterProfilePortlet(IPortletDataProvider):
     max_results =  schema.Int(title=_(u'Maximum results'),
                                description=_(u"The maximum results number."),
                                required=True,
-                               default=20)
+                               default=5)
 
     pretty_date = schema.Bool(title=_(u'Pretty dates'),
                               description=_(u"Show dates in a pretty format (ie. '4 hours ago')."),
@@ -186,7 +186,6 @@ class Renderer(base.Renderer):
             except Exception, e:
                 logger.info("Something went wrong: %s."%e)
                 results = []
-
         return results
 
 
@@ -218,6 +217,19 @@ class Renderer(base.Renderer):
                 split_text[index] = URL_TEMPLATE%(word,word)
 
         return "<p>%s</p>"%' '.join(split_text)
+
+    def getTweetUrl(self, result):
+        return "https://twitter.com/%s/status/%s" % \
+            (result.user.screen_name, result.id)
+    
+    def getReplyTweetUrl(self, result):
+        return "https://twitter.com/intent/tweet?in_reply_to=%s" % result.id
+    
+    def getReTweetUrl(self, result):
+        return "https://twitter.com/intent/retweet?tweet_id=%s" % result.id
+        
+    def getFavTweetUrl(self, result):
+        return "https://twitter.com/intent/favorite?tweet_id=%s" % result.id
 
     def getDate(self, result):
         if self.data.pretty_date:
