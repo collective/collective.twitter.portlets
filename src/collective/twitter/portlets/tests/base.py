@@ -18,21 +18,21 @@ def setup_product():
     # Load the ZCML configuration for this package and its dependencies
 
     fiveconfigure.debug_mode = True
-    import collective.twitter.profile
-    zcml.load_config('configure.zcml', collective.twitter.profile)
+    import collective.twitter.portlets
+    zcml.load_config('configure.zcml', collective.twitter.portlets)
     fiveconfigure.debug_mode = False
 
     # We need to tell the testing framework that these products
     # should be available. This can't happen until after we have loaded
     # the ZCML.
 
-    ztc.installPackage('collective.twitter.profile')
+    ztc.installPackage('collective.twitter.portlets')
 
 # The order here is important: We first call the deferred function and then
 # let PloneTestCase install it during Plone site setup
 
 setup_product()
-ptc.setupPloneSite(products=['collective.twitter.profile'])
+ptc.setupPloneSite(products=['collective.twitter.portlets'])
 
 
 class TestCase(ptc.PloneTestCase):
