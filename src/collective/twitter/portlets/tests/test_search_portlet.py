@@ -1,8 +1,12 @@
+# -*- coding: utf-8 -*-
+
 import unittest2 as unittest
 
-from collective.twitter.portlets.testing import INTEGRATION_TESTING
+from zope.component import getMultiAdapter
+from zope.component import getUtility
 
-from zope.component import getUtility, getMultiAdapter
+from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
 
 from plone.portlets.interfaces import IPortletType
 from plone.portlets.interfaces import IPortletManager
@@ -13,9 +17,8 @@ from plone.portlets.interfaces import IPortletRenderer
 from plone.app.portlets.storage import PortletAssignmentMapping
 
 from collective.twitter.portlets import twsearch
+from collective.twitter.portlets.testing import INTEGRATION_TESTING
 
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import setRoles
 
 class PortletTest(unittest.TestCase):
 
@@ -35,10 +38,10 @@ class PortletTest(unittest.TestCase):
 
     def test_interfaces(self):
         # TODO: Pass any keyword arguments to the Assignment constructor
-        portlet = twsearch.Assignment(tw_account = u"test",
-                                      search_string = u"Test",
-                                      show_avatars = False,
-                                      max_results = 20)
+        portlet = twsearch.Assignment(tw_account=u"test",
+                                      search_string=u"Test",
+                                      show_avatars=False,
+                                      max_results=20)
 
         self.failUnless(IPortletAssignment.providedBy(portlet))
         self.failUnless(IPortletDataProvider.providedBy(portlet.data))
@@ -71,10 +74,10 @@ class PortletTest(unittest.TestCase):
         mapping = PortletAssignmentMapping()
         request = self.request
 
-        mapping['foo'] = twsearch.Assignment(tw_account = u"test",
-                                             search_string = u"Test",
-                                             show_avatars = False,
-                                             max_results = 20)
+        mapping['foo'] = twsearch.Assignment(tw_account=u"test",
+                                             search_string=u"Test",
+                                             show_avatars=False,
+                                             max_results=20)
 
         editview = getMultiAdapter((mapping['foo'], request), name='edit')
         self.failUnless(isinstance(editview, twsearch.EditForm))
@@ -87,15 +90,14 @@ class PortletTest(unittest.TestCase):
                              context=self.portal)
 
         # TODO: Pass any keyword arguments to the Assignment constructor
-        assignment = twsearch.Assignment(tw_account = u"test",
-                                         search_string = u"Test",
-                                         show_avatars = False,
-                                         max_results = 20)
+        assignment = twsearch.Assignment(tw_account=u"test",
+                                         search_string=u"Test",
+                                         show_avatars=False,
+                                         max_results=20)
 
         renderer = getMultiAdapter(
             (context, request, view, manager, assignment), IPortletRenderer)
         self.failUnless(isinstance(renderer, twsearch.Renderer))
-
 
 
 class RenderTest(unittest.TestCase):
@@ -124,10 +126,10 @@ class RenderTest(unittest.TestCase):
     def test_render(self):
         # TODO: Pass any keyword arguments to the Assignment constructor.
         r = self.renderer(context=self.portal,
-                          assignment=twsearch.Assignment(tw_account = u"test",
-                                                       search_string = u"Test",
-                                                       show_avatars = False,
-                                                       max_results = 20))
+                          assignment=twsearch.Assignment(tw_account=u"test",
+                                                       search_string=u"Test",
+                                                       show_avatars=False,
+                                                       max_results=20))
         r = r.__of__(self.portal)
         r.update()
         #output = r.render()

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from zope.interface import implements
 from zope.interface import alsoProvides
 
@@ -30,6 +32,7 @@ import twitter
 import logging
 
 logger = logging.getLogger(PROJECTNAME)
+
 
 def TwitterAccounts(context):
     registry = getUtility(IRegistry)
@@ -79,7 +82,7 @@ class ITwitterProfilePortlet(IPortletDataProvider):
                                description=_(u"Show people's avatars."),
                                required=False)
 
-    max_results =  schema.Int(title=_(u'Maximum results'),
+    max_results = schema.Int(title=_(u'Maximum results'),
                                description=_(u"The maximum results number."),
                                required=True,
                                default=5)
@@ -129,7 +132,6 @@ class Assignment(base.Assignment):
         return _(u"Twitter profile Portlet")
 
 
-
 class Renderer(base.Renderer):
     """Portlet renderer.
 
@@ -139,7 +141,6 @@ class Renderer(base.Renderer):
     """
 
     render = ViewPageTemplateFile('twprofile.pt')
-
 
     def getHeader(self):
         """
@@ -167,37 +168,36 @@ class Renderer(base.Renderer):
 
         if account:
             logger.info("Got a valid account.")
-            logger.info("consumer_key = %s"%account.get('consumer_key'))
-            logger.info("consumer_secret = %s"%account.get('consumer_secret'))
-            logger.info("access_token_key = %s"%account.get('oauth_token'))
-            logger.info("access_token_secret = %s"%account.get('oauth_token_secret'))
+            logger.info("consumer_key = %s" % account.get('consumer_key'))
+            logger.info("consumer_secret = %s" % account.get('consumer_secret'))
+            logger.info("access_token_key = %s" % account.get('oauth_token'))
+            logger.info("access_token_secret = %s" % account.get('oauth_token_secret'))
 
-            tw =  twitter.Api(consumer_key = account.get('consumer_key'),
-                              consumer_secret = account.get('consumer_secret'),
-                              access_token_key = account.get('oauth_token'),
-                              access_token_secret = account.get('oauth_token_secret'),)
+            tw = twitter.Api(consumer_key=account.get('consumer_key'),
+                             consumer_secret=account.get('consumer_secret'),
+                             access_token_key=account.get('oauth_token'),
+                             access_token_secret=account.get('oauth_token_secret'),)
 
             tw_user = self.data.tw_user
             max_results = self.data.max_results
 
             try:
                 results = tw.GetUserTimeline(tw_user, count=max_results)
-                logger.info("%s results obtained."%len(results))
+                logger.info("%s results obtained." % len(results))
             except Exception, e:
-                logger.info("Something went wrong: %s."%e)
+                logger.info("Something went wrong: %s." % e)
                 results = []
         return results
 
-
     def getTweet(self, result):
         # We need to make URLs, hastags and users clickable.
-        URL_TEMPLATE ="""
+        URL_TEMPLATE = """
         <a href="%s" target="blank_">%s</a>
         """
-        HASHTAG_TEMPLATE ="""
+        HASHTAG_TEMPLATE = """
         <a href="http://twitter.com/#!/search?q=%s" target="blank_">%s</a>
         """
-        USER_TEMPLATE ="""
+        USER_TEMPLATE = """
         <a href="http://twitter.com/#!/%s" target="blank_">%s</a>
         """
 
@@ -208,26 +208,26 @@ class Renderer(base.Renderer):
         for index, word in enumerate(split_text):
             if word.startswith('@'):
                 # This is a user
-                split_text[index] = USER_TEMPLATE%(word[1:],word)
+                split_text[index] = USER_TEMPLATE % (word[1:], word)
             elif word.startswith('#'):
                 # This is a hashtag
-                split_text[index] = HASHTAG_TEMPLATE%("%23"+word[1:],word)
+                split_text[index] = HASHTAG_TEMPLATE % ("%23" + word[1:], word)
             elif word.startswith('http'):
                 # This is a hashtag
-                split_text[index] = URL_TEMPLATE%(word,word)
+                split_text[index] = URL_TEMPLATE % (word, word)
 
-        return "<p>%s</p>"%' '.join(split_text)
+        return "<p>%s</p>" % ' '.join(split_text)
 
     def getTweetUrl(self, result):
         return "https://twitter.com/%s/status/%s" % \
             (result.user.screen_name, result.id)
-    
+
     def getReplyTweetUrl(self, result):
         return "https://twitter.com/intent/tweet?in_reply_to=%s" % result.id
-    
+
     def getReTweetUrl(self, result):
         return "https://twitter.com/intent/retweet?tweet_id=%s" % result.id
-        
+
     def getFavTweetUrl(self, result):
         return "https://twitter.com/intent/favorite?tweet_id=%s" % result.id
 
@@ -241,6 +241,7 @@ class Renderer(base.Renderer):
 
         return date
 
+
 class AddForm(base.AddForm):
     """Portlet add form.
 
@@ -252,6 +253,7 @@ class AddForm(base.AddForm):
 
     def create(self, data):
         return Assignment(**data)
+
 
 class EditForm(base.EditForm):
     """Portlet edit form.

@@ -1,4 +1,7 @@
+# -*- coding: utf-8 -*-
+
 from Products.CMFCore.utils import getToolByName
+
 
 def install(portal, reinstall=False):
     setup_tool = getToolByName(portal, 'portal_setup')
@@ -8,6 +11,7 @@ def install(portal, reinstall=False):
 
     setup_tool.runAllImportStepsFromProfile('profile-collective.twitter.portlets:default')
     return "Ran all uninstall steps."
+
 
 def uninstall(portal, reinstall=False):
     if not reinstall:
