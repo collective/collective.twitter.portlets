@@ -30,28 +30,24 @@ class PortletTest(unittest.TestCase):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
     def test_portlet_type_registered(self):
-        portlet = getUtility(
-            IPortletType,
-            name='collective.twitter.portlets.TwitterProfilePortlet')
-        self.assertEquals(portlet.addview,
-                          'collective.twitter.portlets.TwitterProfilePortlet')
+        name = 'collective.twitter.portlets.TwitterProfilePortlet'
+        portlet = getUtility(IPortletType, name=name)
+        self.assertEqual(portlet.addview, name)
 
     def test_interfaces(self):
         # TODO: Pass any keyword arguments to the Assignment constructor
         portlet = twprofile.Assignment(tw_account=u"test",
-                                      tw_user=u"Test",
-                                      show_avatars=False,
-                                      max_results=20)
+                                       tw_user=u"Test",
+                                       show_avatars=False,
+                                       max_results=20)
 
-        self.failUnless(IPortletAssignment.providedBy(portlet))
-        self.failUnless(IPortletDataProvider.providedBy(portlet.data))
+        self.assertTrue(IPortletAssignment.providedBy(portlet))
+        self.assertTrue(IPortletDataProvider.providedBy(portlet.data))
 
     def test_invoke_add_view(self):
-        portlet = getUtility(
-            IPortletType,
-            name='collective.twitter.portlets.TwitterProfilePortlet')
-        mapping = self.portal.restrictedTraverse(
-            '++contextportlets++plone.leftcolumn')
+        name = 'collective.twitter.portlets.TwitterProfilePortlet'
+        portlet = getUtility(IPortletType, name=name)
+        mapping = self.portal.restrictedTraverse('++contextportlets++plone.leftcolumn')
         for m in mapping.keys():
             del mapping[m]
         addview = mapping.restrictedTraverse('+/' + portlet.addview)
@@ -65,9 +61,8 @@ class PortletTest(unittest.TestCase):
                                    'show_avatars': False,
                                    'max_results': 20})
 
-        self.assertEquals(len(mapping), 1)
-        self.failUnless(isinstance(mapping.values()[0],
-                                   twprofile.Assignment))
+        self.assertEqual(len(mapping), 1)
+        self.assertTrue(isinstance(mapping.values()[0], twprofile.Assignment))
 
     def test_invoke_edit_view(self):
         # NOTE: This test can be removed if the portlet has no edit form
@@ -75,12 +70,12 @@ class PortletTest(unittest.TestCase):
         request = self.request
 
         mapping['foo'] = twprofile.Assignment(tw_account=u"test",
-                                             tw_user=u"Test",
-                                             show_avatars=False,
-                                             max_results=20)
+                                              tw_user=u"Test",
+                                              show_avatars=False,
+                                              max_results=20)
 
         editview = getMultiAdapter((mapping['foo'], request), name='edit')
-        self.failUnless(isinstance(editview, twprofile.EditForm))
+        self.assertTrue(isinstance(editview, twprofile.EditForm))
 
     def test_obtain_renderer(self):
         context = self.portal
@@ -91,13 +86,13 @@ class PortletTest(unittest.TestCase):
 
         # TODO: Pass any keyword arguments to the Assignment constructor
         assignment = twprofile.Assignment(tw_account=u"test",
-                                         tw_user=u"Test",
-                                         show_avatars=False,
-                                         max_results=20)
+                                          tw_user=u"Test",
+                                          show_avatars=False,
+                                          max_results=20)
 
-        renderer = getMultiAdapter(
-            (context, request, view, manager, assignment), IPortletRenderer)
-        self.failUnless(isinstance(renderer, twprofile.Renderer))
+        renderer = getMultiAdapter((context, request, view, manager, assignment),
+                                   IPortletRenderer)
+        self.assertTrue(isinstance(renderer, twprofile.Renderer))
 
 
 class RenderTest(unittest.TestCase):
@@ -114,8 +109,9 @@ class RenderTest(unittest.TestCase):
         context = context or self.portal
         request = request or self.request
         view = view or self.portal.restrictedTraverse('@@plone')
-        manager = manager or getUtility(
-            IPortletManager, name='plone.rightcolumn', context=self.portal)
+        manager = manager or getUtility(IPortletManager,
+                                        name='plone.rightcolumn',
+                                        context=self.portal)
 
         # TODO: Pass any default keyword arguments to the Assignment
         # constructor.
@@ -127,9 +123,9 @@ class RenderTest(unittest.TestCase):
         # TODO: Pass any keyword arguments to the Assignment constructor.
         r = self.renderer(context=self.portal,
                           assignment=twprofile.Assignment(tw_account=u"test",
-                                                       tw_user=u"Test",
-                                                       show_avatars=False,
-                                                       max_results=20))
+                                                          tw_user=u"Test",
+                                                          show_avatars=False,
+                                                          max_results=20))
         r = r.__of__(self.portal)
         r.update()
         #output = r.render()
