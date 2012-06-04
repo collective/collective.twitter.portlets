@@ -4,6 +4,11 @@ Changelog
 1.0b2 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
+- Tested for Plone 4.2 compatibility. [hvelarde]
+
+- Dependency package collective.prettydate no longer has a GS profile (fixes
+  #3). [hvelarde]
+
 - Fixed package distribution. [hvelarde]
 
 
