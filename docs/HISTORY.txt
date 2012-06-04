@@ -1,7 +1,7 @@
 Changelog
 ---------
 
-1.0b2 (unreleased)
+1.0b2 (2012-06-04)
 ^^^^^^^^^^^^^^^^^^
 
 - Tested for Plone 4.2 compatibility. [hvelarde]
