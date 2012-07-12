@@ -40,7 +40,6 @@ setup(name='collective.twitter.portlets',
         'setuptools',
         'collective.prettydate>=1.1',
         'collective.twitter.accounts>=1.0.3',
-        'five.grok>=1.2',
         ],
       extras_require={
         'test': ['plone.app.testing'],

@@ -2,5 +2,5 @@
 <!-- Register the package-specific browser layer, so that it will be activated when this package is installed. -->
     <layers>
         <layer name="collective.twitter.portlets.layer"
-            interface="collective.twitter.portlets.interfaces.ITwitterProfileLayer" />
+            interface="collective.twitter.portlets.interfaces.ITwitterPortletsLayer" />
     </layers>

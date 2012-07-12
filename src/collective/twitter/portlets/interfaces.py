@@ -3,5 +3,5 @@
 from plone.theme.interfaces import IDefaultPloneLayer
 
 
-class ITwitterProfileLayer(IDefaultPloneLayer):
+class ITwitterPortletsLayer(IDefaultPloneLayer):
     """ Browser layer for twitter profile. """
