@@ -13,7 +13,7 @@ Changelog
 - Tested for Plone 4.2 compatibility. [hvelarde]
 
 - Dependency package collective.prettydate no longer has a GS profile (fixes
-  #3). [hvelarde]
+  `#3`_). [hvelarde]
 
 - Fixed package distribution. [hvelarde]
 
@@ -22,4 +22,6 @@ Changelog
 ^^^^^^^^^^^^^^^^^^
 
 - Initial release.
+
+.. _`#3`: https://github.com/collective/collective.twitter.portlets/issues/3
 
