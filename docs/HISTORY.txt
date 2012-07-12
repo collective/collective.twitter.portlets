@@ -4,15 +4,16 @@ Changelog
 1.0b4 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Fixed browser layer interface. [hvelarde]
 
 
 1.0b3 (2012-07-12)
 ^^^^^^^^^^^^^^^^^^
 
-- Removed grok [frapell]
+- Removed dependency on five.grok (fixes `#2`_). [frapell]
 
-- Made the initial profile to be executed by the default if it wasn't executed yet [frapell]
+- Made the initial profile to be executed by the default if it wasn't executed
+  yet. [frapell]
 
 
 1.0b2 (2012-06-04)
@@ -31,5 +32,6 @@ Changelog
 
 - Initial release.
 
+.. _`#2`: https://github.com/collective/collective.twitter.portlets/issues/2
 .. _`#3`: https://github.com/collective/collective.twitter.portlets/issues/3
 
