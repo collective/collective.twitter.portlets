@@ -1,10 +1,18 @@
 Changelog
 ---------
 
-1.0b3 (unreleased)
+1.0b4 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
 - Nothing changed yet.
+
+
+1.0b3 (2012-07-12)
+^^^^^^^^^^^^^^^^^^
+
+- Removed grok [frapell]
+
+- Made the initial profile to be executed by the default if it wasn't executed yet [frapell]
 
 
 1.0b2 (2012-06-04)

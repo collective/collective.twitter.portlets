@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0b3.dev0'
+version = '1.0b4.dev0'
 long_description = open("README.txt").read() + "\n" + \
                    open(os.path.join("docs", "INSTALL.txt")).read() + "\n" + \
                    open(os.path.join("docs", "CREDITS.txt")).read() + "\n" + \
@@ -40,7 +40,6 @@ setup(name='collective.twitter.portlets',
         'setuptools',
         'collective.prettydate>=1.1',
         'collective.twitter.accounts>=1.0.3',
-        'five.grok>=1.2',
         ],
       extras_require={
         'test': ['plone.app.testing'],
