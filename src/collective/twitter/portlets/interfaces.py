@@ -3,5 +3,5 @@
 from zope.interface import Interface
 
 
-class ITwitterProfileLayer(Interface):
-    """ Browser layer for twitter profile. """
+class ITwitterPortletsLayer(Interface):
+    """ Browser layer for package. """

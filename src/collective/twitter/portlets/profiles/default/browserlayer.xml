@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <layers>
  <layer name="collective.twitter.portlets"
-        interface="collective.twitter.portlets.interfaces.ITwitterProfileLayer" />
+    interface="collective.twitter.portlets.interfaces.ITwitterPortletsLayer" />
 </layers>
