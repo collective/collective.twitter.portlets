@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from plone.theme.interfaces import IDefaultPloneLayer
+from zope.interface import Interface
 
 
-class ITwitterProfileLayer(IDefaultPloneLayer):
+class ITwitterProfileLayer(Interface):
     """ Browser layer for twitter profile. """
