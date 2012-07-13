@@ -4,13 +4,15 @@ Changelog
 1.0b4 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Fixed browser layer interface. [hvelarde]
+- Fixed add-on layer interface. [hvelarde]
 
 
 1.0b3 (2012-07-12)
 ^^^^^^^^^^^^^^^^^^
 
 - Removed dependency on five.grok (fixes `#2`_). [frapell]
+
+- Add-on layer was renamed to ITwitterPortletsLayer. [frapell]
 
 - Made the initial profile to be executed by the default if it wasn't executed
   yet. [frapell]
