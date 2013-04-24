@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 import os
 
 version = '1.0b4.dev0'
-long_description = open("README.txt").read() + "\n" + \
-                   open(os.path.join("docs", "INSTALL.txt")).read() + "\n" + \
-                   open(os.path.join("docs", "CREDITS.txt")).read() + "\n" + \
-                   open(os.path.join("docs", "HISTORY.txt")).read()
+long_description = open("README.rst").read() + "\n" + \
+                   open(os.path.join("docs", "INSTALL.rst")).read() + "\n" + \
+                   open(os.path.join("docs", "CREDITS.rst")).read() + "\n" + \
+                   open(os.path.join("docs", "HISTORY.rst")).read()
 
 setup(name='collective.twitter.portlets',
       version=version,
