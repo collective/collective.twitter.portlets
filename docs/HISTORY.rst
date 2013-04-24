@@ -1,8 +1,10 @@
-Changelog
----------
+There's a frood who really knows where his towel is
+---------------------------------------------------
 
 1.0b4 (unreleased)
 ^^^^^^^^^^^^^^^^^^
+
+- Tested for Plone 4.3 compatibility. [hvelarde]
 
 - Add deprecation warning to package documentation. [hvelarde]
 
@@ -38,4 +40,3 @@ Changelog
 
 .. _`#2`: https://github.com/collective/collective.twitter.portlets/issues/2
 .. _`#3`: https://github.com/collective/collective.twitter.portlets/issues/3
-

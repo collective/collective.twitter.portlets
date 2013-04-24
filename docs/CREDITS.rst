@@ -1,7 +1,7 @@
 Share and Enjoy
 ---------------
 
-collective.twitter.portlets would not have been possible without the
+``collective.twitter.portlets`` would not have been possible without the
 contribution of the following people:
 
 - Franco Pellegrini
