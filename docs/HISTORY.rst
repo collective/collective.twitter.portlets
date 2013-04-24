@@ -4,6 +4,8 @@ Changelog
 1.0b4 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
+- Add deprecation warning to package documentation. [hvelarde]
+
 - Fixed add-on layer interface. [hvelarde]
 
 
