@@ -3,21 +3,14 @@ Installation
 
 To enable this product in a buildout-based installation:
 
-1. Edit your buildout.cfg and add ``collective.twitter.portlets`` to the list
-   of eggs to install::
+Edit your buildout.cfg and add ``collective.twitter.portlets`` to the list
+of eggs to install::
 
     [buildout]
     ...
     eggs =
         collective.twitter.portlets
 
-2. You may need to extend a five.grok known good set (KGS) to make sure that
-   you get the right versions of the packages that make up five.grok::
-
-    [buildout]
-    ...
-    extends =
-        http://good-py.appspot.com/release/five.grok/1.2.0-1
 
 After updating the configuration you need to run ''bin/buildout'', which will
 take care of updating your system.
