@@ -7,10 +7,6 @@ collective.twitter.portlets
 Life, the Universe, and Everything
 ----------------------------------
 
-.. Hint::
-   This package is deprecated and no further development is intended; use
-   `collective.portlet.twitter`_ instead.
-
 This package allows you to add different kinds of portlets to your site to get
 tweets.
 
@@ -57,7 +53,6 @@ Mostly Harmless
 
 Have an idea? Found a bug? Let us know by `opening a support ticket`_.
 
-.. _`collective.portlet.twitter`: https://pypi.python.org/pypi/collective.portlet.twitter
 .. _`collective.twitter.accounts`: https://pypi.python.org/pypi/collective.twitter.accounts
 .. _Twitter: http://twitter.com/
 .. _`opening a support ticket`: https://github.com/collective/collective.twitter.portlets/issues
